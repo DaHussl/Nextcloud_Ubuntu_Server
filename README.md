@@ -5,19 +5,19 @@ Installing and configuring Nextcloud on a Linux (Ubuntu) server [installation gu
 ```
 apt update && apt upgrade -y
 ```
-## Installing apache
+## installing apache
 ```
 apt install apache2
 ```
 
-## Install PHP 8.1 
+## install PHP 8.1 
 ```
 apt install software-properties-common
 add-apt-repository ppa:ondrej/php
 apt update
 ```
 
-## Install PHP 8.1 & Moduls
+## install PHP 8.1 & Moduls
 ```
 apt install php8.1 libapache2-mod-php8.1 php8.1-zip php-dompdf php8.1-xml php8.1-mbstring php8.1-gd php8.1-curl php8.1-imagick libmagickcore-6.q16-6-extra php8.1-intl php8.1-bcmath php8.1-gmp php8.1-cli php8.1-mysql php8.1-zip php8.1-gd  php8.1-mbstring php8.1-curl php8.1-xml php-pear unzip nano php8.1-apcu redis-server ufw php8.1-redis
 ```
@@ -32,12 +32,12 @@ date.timezone = Europe/Berlin
 output_buffering = Off
 ```
 
-## Install Databse Server
+## install Databse Server
 ```
 apt install mariadb-server
 ```
 
-## Maria DB Server Konfiguration
+## maria DB Server Konfiguration
 ```
 mysql_secure_installation
 ```
@@ -69,7 +69,7 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-## Download lastest nextcloud version
+## download lastest nextcloud version
 ```
 cd /tmp && wget https://download.nextcloud.com/server/releases/latest.zip
 unzip latest.zip
@@ -99,7 +99,7 @@ nano /etc/apache2/sites-available/nextcloud.conf
 </VirtualHost>
 ```
  
-## Enable the NextCloud and Rewrite Module
+## enable the NextCloud and Rewrite Module
 ```
 a2ensite nextcloud.conf
 a2enmod rewrite
